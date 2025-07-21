@@ -28,10 +28,13 @@
   <div class="website-blocks has-cover">
     <div class="website-cover">
       <section id="block-hero"
-        class="website-block hero bg-dark text-heading-primary text-link-primary text-primary text-center bg-image noshade overlay-none py-5 justify-content-center align-items-center"
+        class="website-block hero bg-dark text-heading-primary text-link-primary text-primary text-center bg-image noshade overlay-none py-3 py-md-5 justify-content-center align-items-center"
         style="
             background-image: url(assets/images/empty-dark-concrete-wall-room-studio-background-floor-perspective-with-blue-soft-light-displays.jpg);
             background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
           ">
         <div class="slots" style="
               overflow: visible;
@@ -44,43 +47,63 @@
               align-items: center;
               justify-content: center;
             "></div>
-        <div class="position-relative container d-flex align-items-center justify-content-center">
-          <img src="assets/images/AY-removebg-preview_rose_gold.png" height="300" />
+
+        <!-- Logo/Image Container -->
+        <div class="position-relative container d-flex align-items-center justify-content-center mb-3 mb-md-4">
+          <img src="assets/images/AY-removebg-preview_rose_gold.png" class="img-fluid"
+            style="max-height: 200px; height: auto; width: auto; max-width: 80vw;" alt="Wedding Logo" />
         </div>
+
+        <!-- Content Container -->
         <div class="position-relative container">
           <div class="d-flex align-items-center justify-content-center position-absolute w-100 h-100"
             style="top: 0; left: 0"></div>
-          <div class="py-4">
-            <div class="lead" data-aos="fade-down">The Wedding of</div>
+          <div class="py-2 py-md-4 px-3 px-md-0">
+            <div class="lead mb-2 mb-md-3" data-aos="fade-down" style="font-size: clamp(1rem, 4vw, 1.25rem);">
+              The Wedding of
+            </div>
 
-            <h1 class="" data-aos="zoom-in" style="font-size: 3rem">
+            <h1 class="mb-3 mb-md-4" data-aos="zoom-in" style="font-size: clamp(2rem, 8vw, 3rem); line-height: 1.2;">
               A'yun &amp; Yoga
             </h1>
-            <div class="row text-center" data-aos="fade-up">
-              <div class="col-12 col-md">
-                <p class="lead" style="font-size: 1em;">From hours behind screens and the waits between
-                  meetings,</p>
-                <p class="lead" style="font-size: 1em;"> Into days spent side by side, no longer apart.</p>
+
+            <div class="row text-center mb-3 mb-md-4" data-aos="fade-up">
+              <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                <p class="lead mb-2" style="font-size: clamp(0.9rem, 3vw, 1rem);">
+                  From hours behind screens and the waits between meetings,
+                </p>
+                <p class="lead" style="font-size: clamp(0.9rem, 3vw, 1rem);">
+                  Into days spent side by side, no longer apart.
+                </p>
               </div>
             </div>
 
-            <div class="h5 my-4 font-weight-bold" data-aos="fade-up" data-aos-delay="300" style="letter-spacing: 4px">
+            <div class="h5 my-3 my-md-4 font-weight-bold" data-aos="fade-up" data-aos-delay="300"
+              style="letter-spacing: 2px; font-size: clamp(1rem, 4vw, 1.25rem);">
               09 . 08 . 2025 & 23 . 08 . 2025
             </div>
-            <div class="h4" data-aos="fade-down">Dear :</div>
-            <div class="lead" data-aos="fade-down">
+
+            <div class="h4 mb-2" data-aos="fade-down" style="font-size: clamp(1.1rem, 4vw, 1.5rem);">
+              Dear :
+            </div>
+            <div class="lead" data-aos="fade-down" style="font-size: clamp(1rem, 4vw, 1.25rem);">
               <span id="name"></span>
             </div>
           </div>
         </div>
       </section>
-      <div class="btn-floating">
-        <div class="btn btn-primary shadow px-4 py-3"
-          onclick="$('.website-blocks').toggleClass('has-cover'); $('.website-cover ~ * .aos-animate').removeClass('aos-animate').addClass('aos-reset'); setTimeout(() =&gt; {$('.aos-reset').removeClass('aos-reset'); AOS.init();}, 1000); typeof playMusic != 'undefined' &amp;&amp; playMusic();">
+
+      <!-- Floating Button -->
+      <div class="btn-floating"
+        style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+        <div class="btn btn-primary shadow px-3 px-md-4 py-2 py-md-3"
+          style="font-size: clamp(0.9rem, 3vw, 1rem); white-space: nowrap;"
+          onclick="$('.website-blocks').toggleClass('has-cover'); $('.website-cover ~ * .aos-animate').removeClass('aos-animate').addClass('aos-reset'); setTimeout(() => {$('.aos-reset').removeClass('aos-reset'); AOS.init();}, 1000); typeof playMusic != 'undefined' && playMusic();">
           Buka Undangan <i class="fa fa-fw fa-arrow-down"></i>
         </div>
       </div>
     </div>
+
 
     <section id="block-couple"
       class="website-block couple text-center bg-image noshade overlay-none py-8 justify-content-center align-items-center has-divider divider-book"
@@ -429,10 +452,14 @@
         <div class="mb-5" data-aos="fade-up">
           <div class="row mb-3">
             <div class="col-12 col-md">
-              <h3>Akad Nikah & Resepsi</h3>
+              <h3>Akad Nikah </h3>
               <div class="mb-3">
                 <div class="mb-1">
-                  <span>08:00 - 14:00</span>
+                  <span>08:00 - 10.00</span>
+                </div>
+                <h3>Resepsi</h3>
+                <div class="mb-1">
+                  <span>12:00 - 14.00</span>
                 </div>
                 <div>
                   <span class="addtocalendar atc-style-blue" data-atc>
